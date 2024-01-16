@@ -49,6 +49,7 @@ function addGamesToPage(games) {
             ${games[i].description}
             </p>
         `;
+        
         // append the game to the games-container
         gamesContainer.appendChild(div);
         }
