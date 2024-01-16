@@ -29,34 +29,29 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
-        for (let i = 0; i < games.length; i++) {
-            const div = document.createElement('div');
-            div.classList.add('game-card');
-            div.innerHTML = `
-                <h3> ${games[i].name} </h3>
-                <img src="${games[i].img}" class="game-img">
-                <p>
-                    <strong>Pledged: ${games[i].pledged}</strong><br>
-                    ${games[i].description}
-                </p>
-            `;
-            gamesContainer.appendChild(div);
-        }
+    for (let i = 0; i < games.length; i++) {
 
         // create a new div element, which will become the game card
-
+        const div = document.createElement('div');
 
         // add the class game-card to the list
-
+        div.classList.add('game-card');
 
         // set the inner HTML using a template literal to display some info 
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-
-
+        div.innerHTML = `
+            <h3> ${games[i].name} </h3>
+            <img src="${games[i].img}" class="game-img">
+            <p>
+            <strong>Pledged: ${games[i].pledged}</strong><br>
+            ${games[i].description}
+            </p>
+        `;
         // append the game to the games-container
-
+        gamesContainer.appendChild(div);
+        }
 }
 
 // call the function we just defined using the correct variable
