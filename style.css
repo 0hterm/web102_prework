@@ -82,3 +82,12 @@ button {
     border-radius: 7px;
     cursor: pointer;
 }
+
+.search-bar-container {
+    font-family: 'Cabin';
+    border: solid 1px black;
+    background-color: rgb(235, 235, 235);
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+}

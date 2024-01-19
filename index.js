@@ -192,3 +192,18 @@ firstGameContainer.appendChild(top_header);
 const runnerup_header = document.createElement('h1');
 runnerup_header.innerHTML = name2;
 secondGameContainer.appendChild(runnerup_header);
+
+//Personal Additions - Hunter Termo
+const searchBarContainer = document.getElementById('search-bar');
+
+const searchFunc = () => {
+    deleteChildElements(gamesContainer);
+
+    const searchFilterList = GAMES_JSON.filter ( (game) => {
+        return game.name.includes(searchBarContainer.value);
+    });
+
+    addGamesToPage(searchFilterList);
+}
+
+searchBarContainer.addEventListener('keypress', searchFunc);
