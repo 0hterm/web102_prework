@@ -200,7 +200,7 @@ const searchFunc = () => {
     deleteChildElements(gamesContainer);
 
     const searchFilterList = GAMES_JSON.filter ( (game) => {
-        return game.name.includes(searchBarContainer.value);
+        return game.name.toLowerCase().includes(searchBarContainer.value.toLowerCase());
     });
 
     addGamesToPage(searchFilterList);
