@@ -91,3 +91,10 @@ button {
     margin: 1%;
     border-radius: 5px;
 }
+
+#jump-btn {
+    position: absolute;
+    right: 50px;
+    font-size: 20pt;
+    color: green;
+}
